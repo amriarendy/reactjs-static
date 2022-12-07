@@ -9,6 +9,10 @@
 - `cd directory_apps`
 - `npm start`
 
+### running database with json-server
+
+- running database in terminal `npx json-server --watch db.json --port 8080`
+
 ### depedencies
 
 ```json
