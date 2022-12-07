@@ -18,11 +18,11 @@ const getProductById = async() => {
     setPrice(data.price);
 }
 
-const EditProduct = async(e) => {
+const updateProduct = async(e) => {
     e.preventDefault();
     const product = {title,price};
-    await fetch('http://localhost:8080/products', {
-        method: "POST",
+    await fetch(`http://localhost:8080/products/${id}`, {
+        method: "PUT",
         body: JSON.stringify(product),
         headers:{
             'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const EditProduct = async(e) => {
 
   return (
     <div>
-        <form onSubmit={EditProduct}>
+        <form onSubmit={updateProduct}>
         <div className="field">
             <label className="label">Title</label>
             <div className="control">
